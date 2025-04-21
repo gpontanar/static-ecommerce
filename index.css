@@ -5,24 +5,104 @@ body {
 .navbar, .bg-primary {
     background-color: #D8A7B1 !important;
 }
+.btn{
+    background-color: #D8A7B1;
+    color: white !important;
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #d83c7a;
+    color: white !important;
+}
 
 #hero {
-    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with your image URL */
+    position: relative;
+    background-image: url('https://cms.mountpleasant.com.sg/s3media/2024-02/cats.jpg?VersionId=cqMgkKMUo7LtZx._peqi1ZHC3u_j1DMG');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 100px 20px;
+    overflow: hidden;
+    
+}
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(158, 154, 157, 0.205);
+    z-index: 1;
 }
 
 #hero h1 {
     font-size: 3rem;
     font-weight: 700;
+    position: relative;
+    z-index: 2;
 }
 
 #hero p {
     font-size: 1.2rem;
     margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #C2185B;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-indicators button {
+    background-color: #C2185B;
+}
+
+.carousel-indicators .active {
+    background-color: #D8A7B1;
+}
+#meowmyCarousel {
+    max-width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#meowmyCarousel .carousel-inner img {
+    height: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.about-heading {
+    color: #C2185B; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    color: #000; 
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#footer {
+    background-color: #D8A7B1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
